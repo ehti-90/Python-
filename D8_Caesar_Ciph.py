@@ -13,9 +13,12 @@ def encrypt(sentence, key):
     encrypted = ""
     
     for ch in sentence:
-        shifted= alphabet.index(ch) + key 
-        mode = shifted % 27     # if it goes out of range (26) it will start from beginning  again
-        encrypted += alphabet[mode]
+        if ch not in alphabet:  # if number or any other symbol it will just add them as it is
+            encrypted += ch
+        else: 
+            shifted= alphabet.index(ch) + key 
+            mode = shifted % 27     # if it goes out of range (26) it will start from beginning  again
+            encrypted += alphabet[mode]
     
     print(f"You encrypted message: {encrypted}")
         
@@ -24,9 +27,12 @@ def decrypt(cipher, key):  # function to decrypt
     decrypted = ""
     
     for c in cipher:
-        shifted = alphabet.index(c) - key
-        mode = shifted % 27
-        decrypted += alphabet[mode]
+        if c not in alphabet:  # if number or any other symbol it will just add them as it is
+            decrypted += c
+        else:
+            shifted = alphabet.index(c) - key
+            mode = shifted % 27
+            decrypted += alphabet[mode]
 
     print(f"You encrypted message: {decrypted}")
     
