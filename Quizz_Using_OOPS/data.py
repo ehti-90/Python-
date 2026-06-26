@@ -1,0 +1,23 @@
+question_data = [
+    {"text": "Arda Guler is the best Mid-fielder at the momemt", "answer":"True"},
+    {"text": "The Earth revolves around the Sun.", "answer": "True"},
+    {"text": "Python was created by Guido van Rossum.", "answer": "True"},
+    {"text": "The capital of Australia is Sydney.", "answer": "False"},
+    {"text": "Light travels faster than sound.", "answer": "True"},
+    {"text": "There are 25 hours in a day.", "answer": "False"},
+    {"text": "Water freezes at 0°C under normal atmospheric pressure.", "answer": "True"},
+    {"text": "The Great Wall of China is visible from the Moon with the naked eye.", "answer": "False"},
+    {"text": "The human body has 206 bones.", "answer": "True"},
+    {"text": "An octopus has three hearts.", "answer": "True"},
+    {"text": "The Pacific Ocean is the smallest ocean on Earth.", "answer": "False"},
+    {"text": "The chemical symbol for Gold is Au.", "answer": "True"},
+    {"text": "Bats are blind.", "answer": "False"},
+    {"text": "Sharks are mammals.", "answer": "False"},
+    {"text": "The speed of light is approximately 300,000 km/s.", "answer": "True"},
+    {"text": "Mount Everest is the tallest mountain above sea level.", "answer": "True"},
+    {"text": "The square root of 64 is 9.", "answer": "False"},
+    {"text": "Venus is the closest planet to the Sun.", "answer": "False"},
+    {"text": "A leap year has 366 days.", "answer": "True"},
+    {"text": "The currency of Japan is the Yen.", "answer": "True"},
+    {"text": "HTML is a programming language.", "answer": "False"}
+]
