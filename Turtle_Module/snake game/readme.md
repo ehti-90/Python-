@@ -63,7 +63,8 @@ The game uses Python's built-in `turtle` module.
 Example:
 
 ```
-image.png
+[Snake Game Screenshot](image.png)
+
 ```
 
 ---
