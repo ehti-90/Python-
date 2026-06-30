@@ -1,9 +1,11 @@
 from turtle import Turtle, Screen
-MOVE_DISTANCE = 15
+
+MOVE_DISTANCE = 20
 UP = 90
 DOWN = 270
 LEFT = 180
 RIGHT = 0
+
 class Snake:
     def __init__(self):
         self.pos = 0 
@@ -20,6 +22,15 @@ class Snake:
             tim.setpos(-(self.pos),0)
             (self.pos) += 20
             self.all_turtles.append(tim)
+            
+    def extend(self):
+        tim = Turtle("square")
+        tim.color("white")
+        tim.penup()
+        last_segment = self.all_turtles[-1]
+        tim.goto(last_segment.position())
+        self.all_turtles.append(tim)
+            
             
     def move(self):        
         for seg in range(len(self.all_turtles) - 1, 0, -1):  # method to move the snake 

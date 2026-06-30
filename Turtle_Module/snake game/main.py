@@ -36,7 +36,20 @@ while game_on:
     
     if snake.head.distance(food) < 15:  # this .distance check distance between snake ob and food object
         food.new_location()             # when they get this close the  food must goto another rand place
-        score.update_score()      
-
+        snake.extend()
+        score.update_score() 
+        
+    # checks if snake crossed window borders   
+    if snake.head.xcor() > 390 or  snake.head.xcor() < -390 or snake.head.ycor() > 390 or snake.head.ycor() < - 390:
+        game_on = False
+        score.game_over()
+        
+    # check if snake head touches any segment
+    for seg in snake.all_turtles[1:]:
+        
+        if snake.head.distance(seg) < 10:   # if distance between any seg and head is less then 10 then game over
+            game_on = False
+            score.game_over()
+            
 
 screen.mainloop()

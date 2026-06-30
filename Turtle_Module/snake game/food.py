@@ -4,9 +4,9 @@ import random
 class Food(Turtle): # we inherit from Turtle class
     def __init__(self):
         super().__init__()
-        self.shape("circle")
+        self.shape("turtle")
         self.penup()
-        self.color("red")
+        self.color("blue")
         self.shapesize(0.5,0.5) # make the turtle smaller circle
         self.speed("fastest")
         self.new_location()
