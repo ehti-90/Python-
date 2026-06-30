@@ -1,0 +1,21 @@
+from turtle import Turtle
+
+class Score(Turtle):
+    def __init__(self):
+        super().__init__()
+        self.score = 0
+        
+        self.color("white") # we are making the colour of turtle that make sthe scoreboard white
+        self.hideturtle()   # we hide it
+        self.penup()
+        self.goto(0, 370)
+        self.pendown()
+        self.write_score()
+    
+    def write_score(self):
+        self.write(f"Score = {self.score}", False, "center", ('Arial', 20, 'normal'))
+      
+    def update_score(self):
+        self.clear()
+        self.score += 1
+        self.write_score()
